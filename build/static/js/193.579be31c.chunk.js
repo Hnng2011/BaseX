@@ -1,0 +1,2 @@
+"use strict";(self.webpackChunkAdulam=self.webpackChunkAdulam||[]).push([[193],{193:function(e,a,s){s.r(a);s(791);var u=s(184);a.default=function(){return(0,u.jsx)("div",{className:"footer",children:"Copyright \xa9 2023-2024 BaseX.space"})}}}]);
+//# sourceMappingURL=193.579be31c.chunk.js.map

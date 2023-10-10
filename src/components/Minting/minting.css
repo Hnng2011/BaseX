@@ -1,0 +1,493 @@
+/*------------------ Hero ---------------------*/
+.hero {
+    height: 100vh;
+    width: 100%;
+    padding-top: 75px;
+}
+
+.spaceship {
+    position: absolute;
+    width: 25vw;
+    z-index: 1;
+}
+
+.spaceship:nth-child(1) {
+    left: 4%;
+    filter: drop-shadow(0px 0px 42px gray);
+    animation: spaceship1 5s 2.5s ease-in;
+}
+
+.spaceship:nth-child(2) {
+    right: 0;
+    top: 30vw;
+    right: 7%;
+    width: 20vw;
+    filter: drop-shadow(4px 4px 22px gray);
+    animation: spaceship2 3s 2.5s ease-in;
+}
+
+@keyframes spaceship1 {
+    0% {
+        opacity: 0;
+        transform: translate(0, 150%);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translate(0, 150%);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes spaceship2 {
+    0% {
+        opacity: 0;
+        transform: translate(100%,0%);
+    }
+
+    30% {
+        opacity: 1;
+        transform: translate(100%,0%);
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.bg-hero {
+    margin: 2% auto;
+    width: 70vw;
+    height: 40vw;
+    border-radius: 20px;
+    position: relative;
+}
+
+.bg-hero .bg {
+    background: linear-gradient(45deg, #40128B, #DD58D6, #eb0808, #9336B4);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 20px;
+    animation: rotate 2s linear infinite;
+}
+
+@keyframes rotate {
+    0% {
+        filter: hue-rotate(360deg) brightness(2);
+    }
+
+    100% {
+        filter: hue-rotate(0deg) brightness(2);
+    }
+}
+
+.imgcontainer {
+    width: 69.5vw;
+    height: 39.5vw;
+    position: absolute;
+    top: 0.25vw;
+    left: 0.25vw;
+}
+
+.bg-hero img {
+    width: 100%;
+    height: 100%;
+    filter: blur(5px) brightness(0.5) contrast(1.2);
+    animation: imgapp 5s 2.5s ease-in;
+    border-radius: 20px;
+}
+
+@keyframes imgapp {
+    0% {
+        filter: blur(0px) brightness(2) contrast(1.2);
+    }
+
+    30% {
+        filter: blur(0px) brightness(2) contrast(1.2);
+    }
+
+    100% {
+        filter: blur(5px) brightness(0.5) contrast(1.2);
+    }
+}
+
+
+.contentcontainer {
+    position: absolute;
+    z-index: 2;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    animation: contentcontainer 5s ease-in;
+}
+
+@keyframes contentcontainer {
+    0% {
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+.contentheader {
+    margin-top: 20%;
+    font-size: 30px;
+    color: #7FA0F6;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2%;
+}
+
+
+.contentcontainer img {
+    z-index: 2;
+    height: 50px;
+    width: 50px;
+    border-radius: 50%;
+    filter: none;
+    animation: none;
+}
+
+.contentcontent {
+    margin-top: 5%;
+    font-size: 50px;
+    color: white;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: 'DM Sans';
+}
+
+/*--------------- Mint ------------------*/
+
+.Mint {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10%;
+    transition: transform 0.5s ease-in-out;
+    will-change: transform;
+}
+
+
+.mintarea {
+    background-color: #763FC5;
+    width: 30vw;
+    height: 30vw;
+    border-radius: 20px;
+    overflow: hidden;
+    position: relative;
+}
+
+.mintarea .bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: linear-gradient(45deg, #03a9f4, purple);
+    filter: blur(10px) brightness(2);
+    animation: turn 2s linear infinite;
+}
+
+@keyframes turn {
+    0% {
+        filter: hue-rotate(360deg);
+    }
+
+    100% {
+        filter: hue-rotate(0deg);
+    }
+}
+
+.mintarea .main {
+    width: 99%;
+    height: 99%;
+    margin: 0.5% 0.5%;
+    background-color: black;
+    border-radius: 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.minting {
+    background: linear-gradient(270deg, rgb(51, 212, 250) 0%, rgb(23, 243, 221) 100%);
+    color: black;
+    width: 300px;
+    height: 50px;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.mintcontent {
+    height: 30vw;
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+
+.mintcontent h1 {
+    color: #7FA0F6;
+    font-family: 'DM Sans';
+    font-size: 30px;
+    margin-bottom: 5%;
+}
+
+.mintcontent p {
+    width: 100%;
+    color: white;
+    word-wrap: break-word;
+    margin-bottom: 5%;
+}
+
+.buttonmint {
+    display: flex;
+    gap: 5%;
+}
+
+.buttonmint button {
+    transition: 0.1s linear;
+}
+
+.buttonmint button:nth-child(2) {
+    color: rgb(51, 212, 250);
+    background: none;
+    border: 2px solid rgb(51, 212, 250);
+}
+
+.buttonmint button:hover {
+    opacity: 0.8;
+}
+
+/*--------------- Introduce --------------*/
+
+.Introduce {
+    height: 100vh;
+    padding-top: 10%;
+    position: relative;
+
+}
+
+.Introduce h1 {
+    font-family: 'DM Sans';
+    font-size: 60px;
+    color: white;
+    text-align: center;
+}
+
+.collection {
+    position: absolute;
+    display: flex;
+    
+    width: 100%;
+    height: 30vw;
+    overflow: hidden;
+}
+
+.collection div {
+    width: 30vw;
+    height: 30vw;
+    padding: 5px;
+    animation: move 20s linear infinite;
+    flex: none;
+}
+
+.collection div:nth-child(1) img {
+    border: 2px solid rgb(171, 24, 24);
+}
+
+.collection div:nth-child(2) img {
+    border: 2px solid rgb(224, 245, 34);
+}
+
+.collection div:nth-child(3) img {
+    border: 2px solid rgb(58, 192, 31);
+}
+
+.collection div:nth-child(4) img {
+    border: 2px solid rgb(48, 86, 211);
+}
+
+.collection div:nth-child(5) img {
+    border: 2px solid rgb(171, 24, 24);
+}
+
+.collection div:nth-child(6) img {
+    border: 2px solid rgb(224, 245, 34);
+}
+
+.collection div:nth-child(7) img {
+    border: 2px solid rgb(58, 192, 31);
+}
+
+.collection div:nth-child(8) img {
+    border: 2px solid rgb(48, 86, 211);
+}
+
+.collection img {
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+@keyframes move {
+    0% {
+        transform: calc(0);
+    }
+
+    100% {
+        transform: translate(calc(-4 * 30vw));
+    }
+}
+
+@media (min-width: 768px) and (max-width: 998px) {
+    .hero,
+    .Mint,
+    .Introduce {
+        height: 100vh;
+    }
+
+    .Introduce {
+        margin-top: 20vh;
+        overflow: hidden;
+    }
+}
+
+@media (max-width: 768px) {
+
+    .hero,
+    .Mint,
+    .Introduce {
+        height: 50vh;
+    }
+
+    .spaceship {
+        animation: none;
+        width: 15vh;
+        height: 15vh;
+    }
+
+    .spaceship:nth-child(2) {
+        top: 30vh;
+    }
+
+    .bg-hero {
+        height: 32vh;
+        width: 32vh;
+    }
+
+    .imgcontainer {
+        width: 31.75vh;
+        height: 31.75vh;
+        top: 0.25vh;
+        left: 0.25vh;
+    }
+
+    .contentcontainer {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .contentheader {
+        margin-top: 0;
+    }
+
+    .contentcontainer h1 {
+        font-size: 10px;
+    }
+
+    .contentcontainer img {
+        height: 5vw;
+        width: 5vw;
+    }
+
+    .contentcontent {
+        font-size: 8px;
+    }
+
+    .mintarea {
+        width: 20vh;
+        height: 20vh;
+    }
+
+
+    .mintarea .main {
+        width: 98%;
+        height: 98%;
+        margin: 01% 01%;
+    }
+
+    .mintcontent {
+        height: 20vh;
+        width: 30%;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mintcontent h1 {
+        font-size: 10px;
+    }
+
+    .mintcontent p {
+        font-size: 8px;
+    }
+
+    .buttonmint button {
+        width: 40%;
+        font-size: 8px;
+    }
+    
+    .Introduce {
+        margin: 20vh 0;
+        overflow: hidden;
+    }
+
+    .Introduce h1  {
+        font-size: 20px;
+        width: auto;
+    }
+
+    .collection {
+        position: absolute;
+        min-width: 100%;
+        height: 30vh;
+        overflow: hidden;
+    }
+    
+    .collection div {
+        margin-top: 5%;
+        width: 25vw;
+        height: 25vw;
+    }
+
+    @keyframes move {
+        0% {
+            transform: calc(0);
+        }
+    
+        100% {
+            transform: translate(calc(-4 * 25vw));
+        }
+    }
+    
+}

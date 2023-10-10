@@ -1,0 +1,175 @@
+.Stake {
+    height: 100vh;
+    width: 100%;
+}
+
+.Stake h1 {
+    opacity: 0.8;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    padding-top: 10%;
+    color: #7FA0F6;
+    font-family: "DM Sans";
+}
+
+.stakefieldbg {
+    opacity: 0.8;
+    pointer-events: none;
+    width: 60vw;
+    height: 30vw;
+    margin: 1% auto;
+    border-radius: 20px;
+    position: relative;
+    background: #40E0D0;
+    /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+    /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #FF0080, #FF8C00, #40E0D0);
+    /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+}
+
+.stakefield {
+    position: absolute;
+    background-color: #060818;
+    width: 59.5vw;
+    height: 29.5vw;
+    margin: 0.25vw 0.25vw;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    color: white;
+}
+
+.stakefield h2 {
+    padding-left: 2%;
+    display: flex;
+    height: 10%;
+    font-size: 12px;
+    align-items: center;
+    border-bottom: 1px solid white;
+}
+
+.stakefield1 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 30%;
+    border-bottom: 1px solid white;
+}
+
+.curstake,
+.APY {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-right: 1px solid white;
+}
+
+.APY {
+    border-right: none;
+}
+
+.curstake h3,
+.APY h3 {
+    color: #7FA0F6;
+    font-size: 12px;
+}
+
+.stakefield2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    height: 60%;
+
+}
+
+.staking,
+.rewards {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    position: relative;
+    border-right: 1px solid white;
+}
+
+.rewards {
+    border-right: none;
+}
+
+.staking h3,
+.rewards h3 {
+    align-self: start;
+    margin-left: 4%;
+    padding-bottom: 10%;
+    color: #7FA0F6;
+    font-size: 12px;
+}
+
+.staking div,
+.rewards div {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 50%;
+    align-items: center;
+    justify-content: center;
+}
+
+.staking div img,
+.rewards div img {
+    width: 5vw;
+    border-radius: 50%;
+}
+
+.staking div button,
+.rewards div button {
+    position: absolute;
+    bottom: -10%;
+    color: black;
+    background-color: #25E4EB;
+    width: 90%;
+    padding: 2%;
+    border-radius: 10px;
+}
+
+.rewards div button {
+    background-color: rgba(0, 0, 0, 0.482);
+    backdrop-filter: blur(10px);
+    color: #25E4EB;
+    border: 1px solid #25E4EB;
+}
+
+
+.comingsoon {
+    width: 100%;
+    position: fixed;
+    z-index: 999;
+    height: 100vh;
+    left: 0%;
+    background-color: rgba(0, 0, 0, 0.167);
+    backdrop-filter: blur(4px);
+}
+
+.comingsoon svg{
+    width: 20%;
+    margin: 2% auto;
+    z-index: 1000;
+    height: 20%;
+    left: 0%;
+}
+
+.comingsoon h1{
+    padding-bottom: 0;
+    margin-bottom: 0;
+    padding-top: 15%;
+    color: white;
+}

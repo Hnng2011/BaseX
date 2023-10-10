@@ -1,0 +1,92 @@
+.back {
+    position: fixed;
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: 0.5s linear;
+    z-index: 10000;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.load {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.back div:first-child {
+    height: 25vw;
+    height: 35vw;
+    margin-bottom: 5%;
+}
+
+.back h1 {
+    color: white;
+}
+
+.wrapper {
+    width: 200px;
+    /* Điều chỉnh kích thước container theo mong muốn */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.text {
+    color: #F9A100;
+    background-color: red;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 25vw;
+    margin: 0;
+    height: 3vw;
+    position: relative;
+    background-color: transparent;
+    z-index: 1;
+}
+
+.text::after {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    position: absolute;
+    background-color: #F9A100;
+    border: 2px solid #F9A100;
+    mix-blend-mode:difference;
+    border-radius: 5px;
+    animation: process 2s linear ;
+    z-index: 0;
+}
+
+.text::before {
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    content: '';
+    position: absolute;
+    background-color: transparent;
+    border-radius: 5px;
+    box-shadow: 0 0 20px 1px#F9A100;
+    z-index: -2;
+}
+
+
+@keyframes process {
+    0% {
+        clip-path: polygon(0 0, 0 0, 0 100%, 0% 100%);
+
+    }
+
+    100% {
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
+    }
+}
+

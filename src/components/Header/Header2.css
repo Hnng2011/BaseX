@@ -1,0 +1,116 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&display=swap');
+
+.navbar {
+    width: 100%;
+    background-color: transparent;
+    z-index: 1000;
+    position: fixed;
+    height: 70px;
+    top: 0;
+    font-family: 'DM Sans', sans-serif;
+    font-weight: 500;
+    color: rgb(216, 228, 248);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px;
+}
+
+.navbar.active {
+    background-color: rgba(128, 128, 128, 0.142);
+    backdrop-filter: blur(20px);
+}
+
+.connectwallet {
+    margin-right: 1%;
+    height: 60%;
+    color: black;
+    border-radius: 10px;
+    padding: 10px;
+    background: linear-gradient(270deg, rgb(51, 212, 250) 0%, rgb(23, 243, 221) 100%);
+    background-size: 150% 100%;
+    transition: 0.5s linear;
+}
+
+.connectwallet:hover {
+    background-position: 100%;
+}
+
+.Logo {
+    flex: 1;
+    margin-left: 1%;
+    font-size: 20px;
+}
+
+.nav {
+    flex: 10;
+    display: flex;
+    gap: 5%;
+    justify-content: center;
+}
+
+.nav button {
+    transition: 0.2s linear;
+}
+
+.nav .active {
+    font-size: 17px;
+    background: linear-gradient(270deg, rgb(51, 212, 250) 0%, rgb(23, 243, 221) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.menu {
+    display: none;
+}
+
+
+@media (max-width: 990px) {
+    .navbar {
+        height: 50px;
+        font-size: 10px;
+        background-color: rgba(128, 128, 128, 0.142);
+        backdrop-filter: blur(20px);
+    }
+
+    .menu {
+        display: block;
+        width: 7vw;
+        margin-right: 90vw;
+        font-size: 20px;
+    }
+
+    .Logo {
+        display: none;
+    }
+
+    .nav {
+        position: absolute;
+        flex-direction: column;
+        top: 50px;
+        left: 5%;
+        font-size: 15px;
+    }
+
+    .nav .active {
+        font-size: 20px;
+    }
+
+    .connectwallet {
+        margin-left: 60vw;
+    }
+
+    .nav.no_active {
+        display: none;
+    }
+
+    .nav.active {
+        display: fixed;
+        top: 50px;
+        width: 100%;
+        height: 100vh;
+        background-color: black;
+        backdrop-filter: blur(100px);
+        left: 0;
+    }
+}
